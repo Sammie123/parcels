@@ -11,11 +11,11 @@ class Parcels {
     mWeight = weight;
   }
 
-  public int calculateVolume(int length, int width, int height) {
-    return length * width * height;
+  public int calculateVolume() {
+    return mLength * mWidth * mHeight;
   }
 
-
+  
   public double costToShip(String speed, int distance) {
     if (speed.equals("overnight") && (distance > 100)) {
       return (7.00 + 20.00)* 1.101;
