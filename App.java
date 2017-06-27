@@ -7,6 +7,8 @@ public class App {
 
     Console myConsole = System.console();
     boolean programRunning = true;
+    double totalCost = 0.0;
+
     List<Parcels> allParcels = new ArrayList<Parcels>();
     while (programRunning) {
 
@@ -49,6 +51,7 @@ public class App {
       System.out.println("Volume is " + volume);
 
       double cost = parcelsOne.costToShip(stringSpeed,parcelDistance);
+      totalCost += cost;
       System.out.println("Cost is " + cost);
 
       System.out.println("Do you want to ship another package? Enter Yes or No");
@@ -61,6 +64,7 @@ public class App {
           System.out.println("Height: " + individualParcel.mHeight);
           System.out.println("Weight: " +individualParcel.mWeight);
         }
+          System.out.println("Total cost to ship your packages: $" + totalCost);
           programRunning = false;
       }
     }
